@@ -12,6 +12,12 @@ const createHeader = () => {
   const nav = document.createElement('nav');
   nav.classList.add('nav-header');
 
+  const burgerButton = document.createElement('button');
+  burgerButton.classList.add('burger');
+  burgerButton.innerHTML = '<i class="fas fa-bars"></i>';
+  burgerButton.addEventListener('click', (e) => {
+    nav.classList.toggle('visible');
+  })
   const buttons = ['home', 'menu', 'contact'];
   buttons.forEach(value => {
     let button = document.createElement('button');
@@ -20,6 +26,7 @@ const createHeader = () => {
     nav.appendChild(button);
   })
   header.appendChild(logo);
+  header.appendChild(burgerButton);
   header.appendChild(nav);
   return header;
 }
@@ -110,8 +117,7 @@ const displayWebsite = () => {
   container.appendChild(createFooter());
 
 
-  // loadHome();
-  loadContact();
+  loadHome();
   setActiveButton();
   setButtonHandlers();
   

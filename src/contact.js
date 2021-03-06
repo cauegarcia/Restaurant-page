@@ -37,7 +37,6 @@ const createForm = () => {
 
   const labels = ['Name','E-mail','Phone'];
   labels.forEach(value => {
-    console.log(value)
     const input = document.createElement('input');
     input.classList.add('input');
     if (value == 'Phone') {
@@ -55,7 +54,6 @@ const createForm = () => {
 
     form.appendChild(label);
     form.appendChild(input);
-    console.log('h')
     form.appendChild(document.createElement('br'));
   })
 

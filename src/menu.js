@@ -49,7 +49,6 @@ const createItem = () => {
   }];
 
   items.forEach(item => {
-    console.log(item.image)
     let div = document.createElement('div');
     div.classList.add('item-div');
 
