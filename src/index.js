@@ -1,6 +1,3 @@
-function component() {
-  
-  return console.log('hey');
-};
+import displayWebsite from './website';
 
-component();
+displayWebsite();
